@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class vector {
+    public static void main(String[] args) {
+        String meses[] = { "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre",
+                "octubre", "noviembre", "diembre" };
+        Integer[] cantidad = new Integer[12];
+        Scanner valor = new Scanner(System.in);
+        double total_estudiantes = 0;
+
+        for (int i = 0; i < 12; i++) {
+
+            System.out.println("Ingrese los valores de cada estudiante " + meses[i]);
+            cantidad[i] = valor.nextInt();
+            total_estudiantes += cantidad[i];
+            // total_estudiantes = total_estudiantes + cantidad[i] (contador)
+        }
+        for (int i = 0; i < 12; i++) {
+            System.out.println(meses[i] + " : " + cantidad[i]);
+        }
+        // System.out.println(total_estudiantes);
+
+        System.out.println("el promedio es " + ((total_estudiantes - 1)  / 12));
+    }
+}
